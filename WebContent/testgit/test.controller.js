@@ -6,6 +6,7 @@ sap.ui.define([
 	return Controller.extend("test.testgit.test",{
 		onInit: function(){
 			
+
 		},
 		
 		onPress: function(evt){
