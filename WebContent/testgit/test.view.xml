@@ -3,7 +3,7 @@
 	<App>
 			<Page title="Title">
 				<content>
-					<Button text="hello git"></Button>
+					<Button text="hello git" press="onPress"></Button>
 				</content>
 			</Page>
 	</App>
