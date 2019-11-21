@@ -12,11 +12,17 @@
 		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
 
 		<script>
-				sap.ui.localResources("testgit");
-				var app = new sap.m.App({initialPage:"idtest1"});
-				var page = sap.ui.view({id:"idtest1", viewName:"testgit.test", type:sap.ui.core.mvc.ViewType.XML});
-				app.addPage(page);
-				app.placeAt("content");
+			jQuery.sap.registerModulePath("test","./");
+			
+			sap.ui.getCore().attachInit(function(){
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height: "100%",
+						name: "test"
+						
+					})
+				}).placeAt("content");
+			});
 		</script>
 
 	</head>
